@@ -17,10 +17,7 @@ func main() {
 	log.Println("Starting channel listener...")
 	go handlers.ListenToWebSocketChannel()
 	log.Println("Webserver is starting on port 8080...")
-	port := os.Getenv("PORT")
-	parsedPort := ":" + port
-	fmt.Println(parsedPort)
-	_ = http.ListenAndServe(parsedPort, mux)
+	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), mux))
 }
 
 func init() {
