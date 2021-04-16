@@ -1,1 +1,1 @@
-web: chat
+web: go-study-chat
