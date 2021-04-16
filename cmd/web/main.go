@@ -14,7 +14,7 @@ func main() {
 
 	log.Println("Starting channel listener...")
 	go handlers.ListenToWebSocketChannel()
-
+	http.HandleFunc("/favicon.ico", handlers.FaviconHandler)
 	log.Println("Webserver is starting on port 8080...")
 	port := os.Getenv("PORT")
 	parsedPort := ":" + port

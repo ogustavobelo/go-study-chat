@@ -139,6 +139,10 @@ func Home(w http.ResponseWriter, r *http.Request) {
 
 }
 
+func FaviconHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "/static/favicon.ico")
+}
+
 func renderPage(w http.ResponseWriter, tmpl string, data jet.VarMap) error {
 	view, err := views.GetTemplate(tmpl)
 	if err != nil {
