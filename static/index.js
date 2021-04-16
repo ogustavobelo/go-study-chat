@@ -11,7 +11,7 @@ let socket = null;
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-        socket = new ReconnectingWebSocket("ws://go-study-chat.herokuapp.com:8080/ws", null, {debug: true, reconectInterval: 3000});
+        socket = new ReconnectingWebSocket("wss://go-study-chat.herokuapp.com/ws", null, { reconectInterval: 3000});
 
         const offline = `<span class="badge bg-danger">Not connected</span>`
         const online = `<span class="badge bg-success">Connected</span>`
