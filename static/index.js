@@ -11,7 +11,7 @@ let socket = null;
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-        socket = new ReconnectingWebSocket("ws://127.0.0.1:8080/ws", null, {debug: true, reconectInterval: 3000});
+        socket = new ReconnectingWebSocket("ws://160.20.161.56:8080/ws", null, {debug: true, reconectInterval: 3000});
 
         const offline = `<span class="badge bg-danger">Not connected</span>`
         const online = `<span class="badge bg-success">Connected</span>`
